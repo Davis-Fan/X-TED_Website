@@ -1,6 +1,6 @@
-# Ripser++ Website
+# X-TED Website
 
-This repository contains the official website for Ripser++, a tool that leverages parallelism for computing Vietoris-Rips persistence barcodes.
+This repository contains the official website for X-TED, a tool that leverages parallelism for computing tree edit distance.
 
 
-The website is hosted on [This Page](https://victorliu-sq.github.io/ripserpp-website/).
+The website is hosted on [This Page](https://github.com/Davis-Fan/X-TED_Website).

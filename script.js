@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 function fetchRepoData() {
-    const repoURL = 'https://api.github.com/repos/simonzhang00/ripser-plusplus';
+    const repoURL = 'https://api.github.com/repos/Davis-Fan/X-TED';
     
     fetch(repoURL)
         .then(response => response.json())
@@ -24,7 +24,7 @@ function fetchRepoData() {
 }
 
 function fetchContributors() {
-    fetch('https://api.github.com/repos/simonzhang00/ripser-plusplus/contributors')
+    fetch('https://api.github.com/repos/Davis-Fan/X-TED/contributors')
         .then(response => response.json())
         .then(data => {
             const contributorsList = document.getElementById('contributors-list');
@@ -60,7 +60,7 @@ function fetchDependentRepos() {
 }
 
 function fetchPullRequests() {
-    fetch('https://api.github.com/repos/simonzhang00/ripser-plusplus/pulls')
+    fetch('https://api.github.com/repos/Davis-Fan/X-TED/pulls')
         .then(response => response.json())
         .then(data => {
             document.getElementById('pull-requests-count').innerText = data.length;
@@ -71,7 +71,7 @@ function fetchPullRequests() {
 }
 
 function fetchBranches() {
-    fetch('https://api.github.com/repos/simonzhang00/ripser-plusplus/branches')
+    fetch('https://api.github.com/repos/Davis-Fan/X-TED/branches')
         .then(response => response.json())
         .then(data => {
             document.getElementById('branches-count').innerText = data.length;

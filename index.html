@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Ripser++</h1>
+    <h1>X-TED</h1>
 
     <div class="github-link-container">
         <a href="#" id="repo-link" target="_blank">
@@ -17,8 +17,11 @@
     </div>
 
     <div class="description">
-        <p>Ripser++ utilizes the massive parallelism hidden in the computation of Vietoris-Rips persistence barcodes by taking mathematical and algorithmic opportunities we have identified. It can achieve up to 30x speedup over the total execution time of Ripser, up to 2.0x CPU memory efficiency and up to 1.58x reduction in the amount of memory used on GPU compared to that on CPU for Ripser.</p>
-        <p>After dimension 0 persistence computation, there are two stages of computation in the original Ripser: filtration construction with clearing followed by matrix reduction. Ripser++ massively parallelizes the filtration construction with clearing stage and extracts the hidden parallelism of finding "apparent pairs" from matrix reduction all on GPU, leaving the computation of submatrix reduction on the remaining nonapparent columns on CPU. By our empirical findings, up to 99.9% of the columns in a cleared coboundary matrix are apparent.</p>
+        <p>X-TED is a high-performance massive parallel computation framework for TED computation and we have provided its implementation on GPU. We have identified two critical issues of TED: the complex and extensive data dependencies, and highly imbalanced workloads during parallel processing. </p>
+        <p>Our preprocessing algorithm can quickly determine data dependency relationships among tables before parallel processing. In addition, we have applied effective parallel methods to compute tables with different sizes, optimizing resource allocation and effectively resolving the imbalanced workload issue. </p>
+        <p>The intensive experimental results demonstrate that X-TED surpasses all existing solutions, achieving up to 42x speedup over the state-of-the-art sequential AP-TED, and outperforming the existing multicore parallel MCTED by an average speedup of 31x.</p>
+        <h3>New Feature from Last Update: </h3>
+        <p>We generate random recursive trees with a range of 1000 to 9000 nodes as synthetic trees, and evaluate X-TED on this Synthetic dataset as well.</p>
     </div>
 
     <div class="info-section">
@@ -47,12 +50,17 @@
         <ul id="contributors-list"></ul>
     </div>
 
-    <div class="dependent-repos-section description">
-        <h3>Dependent Repos:</h3>
-        <ul id="dependent-repos-list"></ul>
-    </div>
+    <!-- <div class="info-card">
 
-    <script src="script.js"></script>
+<div class="dependent-repos-section description">
+<h3>Dependent Repos:</h3>
+<ul id="dependent-repos-list"></ul>
+</div>
+-->
+
+<script src="script.js"></script>
+
+
 </body>
 </html>
 
